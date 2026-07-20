@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://better.com/.well-known/openid-configuration
+note: >-
+  Better does not publish a public developer API. This profiles the consumer
+  identity provider (AWS Cognito, us-east-1) that backs sign-in at better.com,
+  discovered via its OpenID Connect metadata document.
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode, implicit]
+  pkce: [S256]
+schemes:
+- name: BetterOIDC
+  type: openIdConnect
+  openIdConnectUrl: https://better.com/.well-known/openid-configuration
+  issuer: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_ZQ2HayNPw
+  authorization_endpoint: https://prod.bettermg.com/api/idp/sso
+  token_endpoint: https://prod.bettermg.com/api/idp/token
+  userinfo_endpoint: https://prod.idp.bettermg.com/oauth2/userInfo
+  revocation_endpoint: https://prod.idp.bettermg.com/oauth2/revoke
+  end_session_endpoint: https://prod.idp.bettermg.com/logout
+  jwks_uri: https://prod.bettermg.com/.well-known/jwks.json
+  id_token_signing_alg: [RS256]
+  response_types: [code, token]
+  pkce: [S256]
+  token_endpoint_auth_methods: [none]
+  scopes: [openid, email, phone, profile]
+  sources: [well-known/better-openid-configuration.json]
