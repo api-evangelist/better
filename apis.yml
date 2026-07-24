@@ -1,8 +1,29 @@
 aid: better
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/better.png
 name: Better
-description: Better is a company surfaced as a portfolio company of bond-capital, softbank-vision-fund
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Better (Better Home & Finance Company, NASDAQ: BETR) is a New York-based digital
+  homeownership company founded in 2014 by Vishal Garg. Its Tinman-powered platform
+  delivers an end-to-end online mortgage experience - purchase loans, refinancing,
+  cash-out refinancing, HELOCs, VA loans, and crypto-backed mortgages - alongside
+  real estate agent matching, title and closing services, and homeowners insurance
+  through Better+. Better became a Fannie Mae-approved seller/servicer in 2016, has
+  funded over $100B in mortgages, and launched One Day Mortgage in 2023. It is backed
+  by SoftBank Vision Fund, Bond Capital, Ally, Citi, Ping An, Goldman Sachs, KPCB, and
+  American Express. Better publishes no public developer API; this profile captures its
+  public web, consumer identity (AWS Cognito OIDC), and domain-security surface.
 url: https://raw.githubusercontent.com/api-evangelist/better/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,9 +34,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Mortgage
+- Lending
+- Fintech
+- Real Estate
+- Home Equity
+- Insurance
+- Financial Services
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +53,30 @@ maintainers:
 common:
 - type: Website
   url: https://better.com
+- type: AboutUs
+  url: https://better.com/about-us
+- type: Blog
+  url: https://better.com/content
+- type: Support
+  url: https://better.com/about-us/contact-us
+- type: Pricing
+  url: https://better.com/mortgage-rates
+- type: TermsOfService
+  url: https://better.com/about-us/terms-of-use
+- type: PrivacyPolicy
+  url: https://better.com/about-us/privacy-policy
+- type: WellKnown
+  url: well-known/better-well-known.yml
+- type: Authentication
+  url: authentication/better-authentication.yml
+- type: OAuthScopes
+  url: scopes/better-scopes.yml
+- type: Conformance
+  url: conformance/better-conformance.yml
+- type: DomainSecurity
+  url: security/better-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

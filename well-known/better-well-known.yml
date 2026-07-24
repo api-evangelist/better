@@ -1,0 +1,15 @@
+generated: '2026-07-18'
+method: searched
+source: https://better.com/.well-known/
+host: https://better.com
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: better-openid-configuration.json
+  note: OpenID Connect discovery for the consumer sign-in identity provider (AWS Cognito, us-east-1).
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404

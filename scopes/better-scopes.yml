@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: well-known/better-openid-configuration.json
+docs: https://better.com/.well-known/openid-configuration
+note: >-
+  OIDC scopes advertised by the consumer sign-in identity provider (AWS Cognito).
+  These are standard OpenID Connect scopes, not developer-API permission scopes;
+  Better publishes no public developer API.
+schemes:
+- name: BetterOIDC
+  source: well-known/better-openid-configuration.json
+  issuer: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_ZQ2HayNPw
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://prod.bettermg.com/api/idp/sso
+    tokenUrl: https://prod.bettermg.com/api/idp/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; issue an ID token for the signed-in user.
+  flows: [authorizationCode]
+  sources: [well-known/better-openid-configuration.json]
+- scope: email
+  description: Access to the user's email address and email_verified claims.
+  flows: [authorizationCode]
+  sources: [well-known/better-openid-configuration.json]
+- scope: phone
+  description: Access to the user's phone_number and phone_number_verified claims.
+  flows: [authorizationCode]
+  sources: [well-known/better-openid-configuration.json]
+- scope: profile
+  description: Access to the user's default profile claims (name, etc.).
+  flows: [authorizationCode]
+  sources: [well-known/better-openid-configuration.json]
